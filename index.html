@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <title>Tbilisi Style 21 — Electronic Music Festival | 27-29 August 2027</title>
+  <meta name="description" content="Georgia's biggest electronic music festival. 4 stages, 60+ artists, Qvevri Rave. Tbilisi, August 27-29, 2027. Buy your ticket now." />
+  <link rel="icon" type="image/jpeg" href="../public/images/logo2.jpeg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Georgian:wght@500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- FIX #1: Featured banner (was missing) -->
+  <div class="banner" data-banner>
+    🎉 Early Bird tickets — Save 30% until June 30. Limited to 500 tickets.
+    <button class="banner-close" data-banner-close aria-label="Close banner">✕</button>
+  </div>
+
+  <!-- FIX #2: Proper header with desktop tabs (was: hamburger-only on all screens) -->
+  <header class="header transparent">
+    <a href="#" class="logo">Tbilisi <span>Style 21</span></a>
+
+    <nav class="nav-desktop">
+      <a href="#about">Festival</a>
+      <a href="#lineup">Lineup</a>
+      <a href="#stages">Stages</a>
+      <a href="#tickets" class="active">Tickets</a>
+      <a href="#visit">Plan Your Visit</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="#tickets" class="btn-buy">Buy Tickets</a>
+      <button class="btn-burger" data-burger aria-label="Open menu">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Drawer: grouped navigation (was: flat 13 links) -->
+  <div class="drawer-backdrop" data-drawer-backdrop></div>
+  <aside class="drawer" data-drawer>
+    <button class="drawer-close" data-drawer-close aria-label="Close menu">✕</button>
+    <div class="drawer-inner">
+
+      <div class="drawer-group">
+        <div class="drawer-group-title">Language</div>
+        <div class="drawer-langs">
+          <button class="active">EN</button>
+          <button>KA</button>
+          <button>RU</button>
+          <button>UA</button>
+        </div>
+      </div>
+
+      <div class="drawer-group">
+        <div class="drawer-group-title">The Festival</div>
+        <a href="#about">Our Story</a>
+        <a href="#about">Mission</a>
+        <a href="#stages">Four Stages</a>
+      </div>
+
+      <div class="drawer-group">
+        <div class="drawer-group-title">Music</div>
+        <a href="#lineup">Lineup</a>
+        <a href="#stages">Main Stage</a>
+        <a href="#stages">Qvevri Stage</a>
+        <a href="#stages">Techno Qvevri</a>
+        <a href="#stages">Ukrainian Day</a>
+      </div>
+
+      <div class="drawer-group">
+        <div class="drawer-group-title">Experience</div>
+        <a href="#tickets">Tickets</a>
+        <a href="#food">Food & Bars</a>
+        <a href="#tickets">Joker Ticket</a>
+      </div>
+
+      <div class="drawer-group">
+        <div class="drawer-group-title">Plan Your Visit</div>
+        <a href="#visit">How to Get There</a>
+        <a href="#visit">Festival Map</a>
+        <a href="#faq">FAQ</a>
+        <a href="#faq">Rules & Terms</a>
+        <a href="#footer">Contact Us</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ============================================
+       FIX #3: HERO — countdown, date, location, CTA
+       (was: just "ENTER" button — nothing sold)
+       ============================================ -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="../public/images/dashboardimage_1920x1080_full.jpeg" alt="Tbilisi Style 21 Festival" />
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">3rd Edition · 2027</div>
+      <h1>Tbilisi Style 21</h1>
+      <p class="hero-subtitle">Georgia's largest electronic music festival</p>
+
+      <!-- FIX: date + location visible at first glance -->
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          27—29 August 2027
+        </div>
+        <div class="hero-meta-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Tbilisi, Georgia
+        </div>
+        <div class="hero-meta-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          From 80 ₾
+        </div>
+      </div>
+
+      <!-- FIX: clear CTAs vs. single "ENTER" -->
+      <div class="hero-cta">
+        <a href="#tickets" class="btn-primary">Buy Tickets</a>
+        <a href="#lineup" class="btn-secondary">See Lineup</a>
+      </div>
+
+      <!-- FIX #4: Countdown (was completely missing) -->
+      <div class="countdown">
+        <div class="countdown-item">
+          <div class="countdown-value" data-cd="days">00</div>
+          <div class="countdown-label">Days</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-value" data-cd="hours">00</div>
+          <div class="countdown-label">Hours</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-value" data-cd="mins">00</div>
+          <div class="countdown-label">Minutes</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-value" data-cd="secs">00</div>
+          <div class="countdown-label">Seconds</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">Scroll ↓</div>
+  </section>
+
+  <!-- ============================================
+       FIX #5: Stats / Social proof
+       ============================================ -->
+  <section class="stats">
+    <div class="stats-grid">
+      <div>
+        <div class="stat-value">60+</div>
+        <div class="stat-label">Artists</div>
+      </div>
+      <div>
+        <div class="stat-value">4</div>
+        <div class="stat-label">Stages</div>
+      </div>
+      <div>
+        <div class="stat-value">3</div>
+        <div class="stat-label">Days</div>
+      </div>
+      <div>
+        <div class="stat-value">30K</div>
+        <div class="stat-label">Capacity</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FIX #6: About — readable typography
+       (was: huge UPPERCASE wall of 400-word paragraphs)
+       ============================================ -->
+  <section class="section fade-in" id="about">
+    <div class="section-header">
+      <div class="section-eyebrow">Our Story</div>
+      <h2 class="section-title">A festival born from a vision</h2>
+      <p class="section-lead">From a small idea in Kyiv to Georgia's biggest electronic gathering — Tbilisi Style 21 unites Georgian culture with world-class electronic music.</p>
+    </div>
+
+    <div class="about">
+      <div class="about-image">
+        <img src="../public/images/mission.jpeg" alt="Tbilisi Style 21 Mission" />
+      </div>
+      <div class="about-text">
+        <p>Hello, I'm Beka Abzianidze, born in Tbilisi. I first walked into a club at 17, and that night I knew this world was mine. From 2019 to early 2026 I lived in Kyiv, where I saw what a real festival could become.</p>
+        <p>The idea for Tbilisi Style 21 came one evening in Kyiv when a Ukrainian friend gifted me a hand-forged iron grape cluster. I lived on Vinogradar street then, and something clicked — Georgian wine, qvevri, electronic music. They belonged together.</p>
+        <p>Our mission is to fuse Georgian heritage with modern electronic sound, and to give Georgian talent the world stage they deserve. With your support, Tbilisi Style 21 can become what Tomorrowland, Ultra and Zamna already are — a destination festival that puts Georgia on the global map.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FIX #7: Lineup — interactive cards with day filter
+       (was: 3 static poster images)
+       ============================================ -->
+  <section class="section fade-in" id="lineup" style="border-top: 1px solid var(--color-border);">
+    <div class="section-header">
+      <div class="section-eyebrow">2027 Lineup</div>
+      <h2 class="section-title">60+ artists. 4 stages.</h2>
+      <p class="section-lead">Filter by festival day to find your favorite acts. Click any artist to see their set time, stage and Spotify preview.</p>
+    </div>
+
+    <div class="lineup-filters">
+      <button class="lineup-filter active" data-filter="all">All Days</button>
+      <button class="lineup-filter" data-filter="1">Day 1 · Aug 27</button>
+      <button class="lineup-filter" data-filter="2">Day 2 · Aug 28</button>
+      <button class="lineup-filter" data-filter="3">Day 3 · Aug 29</button>
+      <button class="lineup-filter" data-filter="rave">Qvevri Rave · Sep 11</button>
+    </div>
+
+    <div class="lineup-grid">
+      <div class="artist-card" data-day="1">
+        <div class="artist-image">
+          <span class="artist-stage">Main</span>
+          <span class="artist-day">D1</span>
+          <img src="../public/images/mainstage11.jpeg" alt="Anyma" />
+        </div>
+        <div class="artist-info">
+          <div class="artist-name">Anyma</div>
+          <div class="artist-time">🕐 23:00 — 01:00</div>
+        </div>
+      </div>
+
+      <div class="artist-card" data-day="1">
+        <div class="artist-image">
+          <span class="artist-stage">Qvevri</span>
+          <span class="artist-day">D1</span>
+          <img src="../public/images/qvevriStage1.jpeg" alt="Charlotte de Witte" />
+        </div>
+        <div class="artist-info">
+          <div class="artist-name">Charlotte de Witte</div>
+          <div class="artist-time">🕐 01:00 — 03:00</div>
+        </div>
+      </div>
+
+      <div class="artist-card" data-day="1">
+        <div class="artist-image">
+          <span class="artist-stage">Live Corner</span>
+          <span class="artist-day">D1</span>
+          <img src="../public/images/mainstage22.jpeg" alt="Tale Of Us" />
+        </div>
+        <div class="artist-info">
+          <div class="artist-name">Tale Of Us</div>
+          <div class="artist-time">🕐 21:00 — 23:00</div>
+        </div>
+      </div>
+
+      <div class="artist-card" data-day="1">
+        <div class="artist-image">
+          <span class="artist-stage">Future Gen</span>
+          <span class="artist-day">D1</span>
+          <img src="../public/images/qvevriStage2.jpeg" alt="Mind Against" />
+        </div>
+        <div class="artist-info">
+          <div class="artist-name">Mind Against</div>
+          <div class="artist-time">🕐 19:00 — 21:00</div>
+        </div>
+      </div>
+
+      <div class="artist-card" data-day="2">
+        <div class="artist-image">
+          <span class="artist-stage">Main</span>
+          <span class="artist-day">D2</span>
+          <img src="../public/images/ukrainianday.jpeg" alt="Korolova" />
+        </div>
+        <div class="artist-info">
+          <div class="artist-name">Korolova</div>
+          <div class="artist-time">🕐 22:00 — 00:00</div>
+        </div>
+      </div>
+
+      <div class="artist-card" data-day="2">
+        <div class="artist-image">
+          <span class="artist-stage">Qvevri</span>
+          <span class="artist-day">D2</span>
+          <img src="../public/images/qvevriStage1.jpeg" alt="Miss Monique" />
+        </div>
+        <div class="artist-info">
+          <div class="artist-name">Miss Monique</div>
+          <div class="artist-time">🕐 00:00 — 02:00</div>
+        </div>
+      </div>
+
+      <div class="artist-card" data-day="2">
+        <div class="artist-image">
+          <span class="artist-stage">Main</span>
+          <span class="artist-day">D2</span>
+          <img src="../public/images/mainstage11.jpeg" alt="ARTBAT" />
+        </div>
+        <div class="artist-info">
+          <div class="artist-name">ARTBAT</div>
+          <div class="artist-time">🕐 02:00 — 04:00</div>
+        </div>
+      </div>
+
+      <div class="artist-card" data-day="2">
+        <div class="artist-image">
+          <span class="artist-stage">Live Corner</span>
+          <span class="artist-day">D2</span>
+          <img src="../public/images/ukrainianday.jpeg" alt="Aisha" />
+        </div>
+        <div class="artist-info">
+          <div class="artist-name">Aisha</div>
+          <div class="artist-time">🕐 20:00 — 22:00</div>
+        </div>
+      </div>
+
+      <div class="artist-card" data-day="3">
+        <div class="artist-image">
+          <span class="artist-stage">Main</span>
+          <span class="artist-day">D3</span>
+          <img src="../public/images/mainstage22.jpeg" alt="Solomun" />
+        </div>
+        <div class="artist-info">
+          <div class="artist-name">Solomun</div>
+          <div class="artist-time">🕐 23:00 — 02:00</div>
+        </div>
+      </div>
+
+      <div class="artist-card" data-day="3">
+        <div class="artist-image">
+          <span class="artist-stage">Qvevri</span>
+          <span class="artist-day">D3</span>
+          <img src="../public/images/qvevriStage2.jpeg" alt="Amelie Lens" />
+        </div>
+        <div class="artist-info">
+          <div class="artist-name">Amelie Lens</div>
+          <div class="artist-time">🕐 01:00 — 03:00</div>
+        </div>
+      </div>
+
+      <div class="artist-card" data-day="rave">
+        <div class="artist-image">
+          <span class="artist-stage">Qvevri</span>
+          <span class="artist-day">RAVE</span>
+          <img src="../public/images/technoqvevri.jpeg" alt="I Hate Models" />
+        </div>
+        <div class="artist-info">
+          <div class="artist-name">I Hate Models</div>
+          <div class="artist-time">🕐 00:00 — 03:00</div>
+        </div>
+      </div>
+
+      <div class="artist-card" data-day="rave">
+        <div class="artist-image">
+          <span class="artist-stage">Qvevri</span>
+          <span class="artist-day">RAVE</span>
+          <img src="../public/images/technoqvevri.jpeg" alt="SPFDJ" />
+        </div>
+        <div class="artist-info">
+          <div class="artist-name">SPFDJ</div>
+          <div class="artist-time">🕐 03:00 — 06:00</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-8">
+      <a href="#" class="btn-secondary">View All 60+ Artists</a>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FIX #8: Stages — visual cards (was: separate pages, no overview)
+       ============================================ -->
+  <section class="section fade-in" id="stages" style="border-top: 1px solid var(--color-border);">
+    <div class="section-header">
+      <div class="section-eyebrow">Four Stages</div>
+      <h2 class="section-title">Music in every direction</h2>
+    </div>
+
+    <div class="stages-grid">
+      <div class="stage-card">
+        <img src="../public/images/mainstage11.jpeg" alt="Main Stage" />
+        <div class="stage-content">
+          <span class="stage-tag">Main Stage</span>
+          <h3 class="stage-title">Main Stage</h3>
+          <p class="stage-desc">60×15m main stage with European-style production, LED walls, and 6 DJs per night under a vine-and-grape canopy.</p>
+          <a href="#" class="stage-link">Explore →</a>
+        </div>
+      </div>
+
+      <div class="stage-card">
+        <img src="../public/images/qvevriStage1.jpeg" alt="Qvevri Stage" />
+        <div class="stage-content">
+          <span class="stage-tag">Qvevri Stage</span>
+          <h3 class="stage-title">Qvevri Stage</h3>
+          <p class="stage-desc">Inside a giant qvevri — Georgia's ancient winemaking vessel. Hard techno, industrial, peak-time. Capacity 7,000.</p>
+          <a href="#" class="stage-link">Explore →</a>
+        </div>
+      </div>
+
+      <div class="stage-card">
+        <img src="../public/images/ukrainianday.jpeg" alt="Ukrainian Day" />
+        <div class="stage-content">
+          <span class="stage-tag">Day 2 · Aug 28</span>
+          <h3 class="stage-title">Ukrainian Day</h3>
+          <p class="stage-desc">An entire day curated by Ukrainian artists. Korolova, Miss Monique, ARTBAT — opening and closing the festival.</p>
+          <a href="#" class="stage-link">Explore →</a>
+        </div>
+      </div>
+
+      <div class="stage-card">
+        <img src="../public/images/technoqvevri.jpeg" alt="Techno Qvevri Rave" />
+        <div class="stage-content">
+          <span class="stage-tag">Sep 11 · Special</span>
+          <h3 class="stage-title">Techno Qvevri Rave</h3>
+          <p class="stage-desc">An after-festival night. Hard, dark, relentless techno from European headliners. One night, one giant qvevri.</p>
+          <a href="#" class="stage-link">Explore →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FIX #9: TICKETS — proper cards with images, urgency, badges
+       (was: plain grid, no urgency, no images)
+       ============================================ -->
+  <section class="section fade-in" id="tickets" style="border-top: 1px solid var(--color-border);">
+    <div class="section-header">
+      <div class="section-eyebrow">Tickets</div>
+      <h2 class="section-title">Pick your experience</h2>
+      <p class="section-lead">Early Bird prices end June 30. After that, regular pricing applies. Maximum 3 tickets per person.</p>
+    </div>
+
+    <div class="tickets-grid">
+
+      <!-- Day Pass -->
+      <article class="ticket-card">
+        <div class="ticket-badge">Early Bird</div>
+        <div class="ticket-image">
+          <img src="../public/images/mainstage11.jpeg" alt="Day Pass" />
+        </div>
+        <div class="ticket-body">
+          <div class="ticket-name">Day Pass</div>
+          <div class="ticket-date">27 OR 28 OR 29 August 2027</div>
+          <div class="ticket-price">
+            <span class="ticket-price-current">80 ₾</span>
+            <span class="ticket-price-original">120 ₾</span>
+          </div>
+          <ul class="ticket-features">
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              Access to all 4 stages for 1 day
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              Food Zone & main bars
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              QR ticket + entrance wristband
+            </li>
+          </ul>
+          <div class="ticket-progress">
+            <div class="ticket-progress-bar"><div class="ticket-progress-fill" style="width: 78%"></div></div>
+            <div class="ticket-progress-text">78% sold · <strong>112 left at this price</strong></div>
+          </div>
+          <button class="ticket-btn" data-buy
+                  data-ticket-name="Day Pass"
+                  data-ticket-date="27 August 2027 · Tbilisi"
+                  data-ticket-price="80">Buy Day Pass</button>
+        </div>
+      </article>
+
+      <!-- Joker — Featured -->
+      <article class="ticket-card featured">
+        <div class="ticket-badge">⭐ Most Popular</div>
+        <div class="ticket-image">
+          <img src="../public/images/joker1.jpeg" alt="Joker Ticket" />
+        </div>
+        <div class="ticket-body">
+          <div class="ticket-name">Joker Ticket</div>
+          <div class="ticket-date">All 3 days · Premium status</div>
+          <div class="ticket-price">
+            <span class="ticket-price-current">280 ₾</span>
+            <span class="ticket-price-original">400 ₾</span>
+          </div>
+          <ul class="ticket-features">
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              All 3 festival days + Joker zone access
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              Lifetime "Joker" status — discounts on every future event
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              Vote for the official Tbilisi Style Joker DJ
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              Exclusive Joker merchandise
+            </li>
+          </ul>
+          <div class="ticket-progress">
+            <div class="ticket-progress-bar"><div class="ticket-progress-fill" style="width: 64%"></div></div>
+            <div class="ticket-progress-text">64% sold · <strong>1,800 left of 5,000</strong></div>
+          </div>
+          <button class="ticket-btn" data-buy
+                  data-ticket-name="Joker Ticket"
+                  data-ticket-date="All 3 days · 27-29 August 2027"
+                  data-ticket-price="280">Become a Joker</button>
+        </div>
+      </article>
+
+      <!-- 3-Day Pass -->
+      <article class="ticket-card">
+        <div class="ticket-badge">Best Value</div>
+        <div class="ticket-image">
+          <img src="../public/images/qvevriStage2.jpeg" alt="3-Day Pass" />
+        </div>
+        <div class="ticket-body">
+          <div class="ticket-name">3-Day Pass</div>
+          <div class="ticket-date">27, 28 & 29 August 2027</div>
+          <div class="ticket-price">
+            <span class="ticket-price-current">200 ₾</span>
+            <span class="ticket-price-original">300 ₾</span>
+          </div>
+          <ul class="ticket-features">
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              Access to all 3 days
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              All stages including Ukrainian Day
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              Save 40 ₾ vs. 3 separate Day Passes
+            </li>
+          </ul>
+          <div class="ticket-progress">
+            <div class="ticket-progress-bar"><div class="ticket-progress-fill" style="width: 45%"></div></div>
+            <div class="ticket-progress-text">45% sold · plenty available</div>
+          </div>
+          <button class="ticket-btn" data-buy
+                  data-ticket-name="3-Day Pass"
+                  data-ticket-date="27—29 August 2027 · Tbilisi"
+                  data-ticket-price="200">Buy 3-Day Pass</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FIX #10: Food zone — visual section
+       ============================================ -->
+  <section class="section fade-in" id="food" style="border-top: 1px solid var(--color-border);">
+    <div class="section-header">
+      <div class="section-eyebrow">Food & Bars</div>
+      <h2 class="section-title">Taste the festival</h2>
+      <p class="section-lead">Three Food Zones inspired by traditional Georgian houses — chefs from Italy, Ukraine and Georgia, vegetarian and vegan options, late-night kitchen until festival closes.</p>
+    </div>
+
+    <div class="about">
+      <div class="about-image">
+        <img src="../public/images/foodzone1.jpeg" alt="Food Zone" />
+      </div>
+      <div class="about-text">
+        <p>Food Zones are designed in the style of old Georgian architecture — wooden ode houses, open kitchens, and live cooking that turns dining into an experience.</p>
+        <p>Chefs from three countries serve fast, modern menus tuned to festival tempo. Cashless payment everywhere, short queues, and a late-night kitchen that runs until the last beat drops.</p>
+        <p style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px;">
+          <span style="padding: 6px 14px; border: 1px solid var(--color-border); border-radius: 999px; font-size: 12px;">🥗 Vegan</span>
+          <span style="padding: 6px 14px; border: 1px solid var(--color-border); border-radius: 999px; font-size: 12px;">🌿 Vegetarian</span>
+          <span style="padding: 6px 14px; border: 1px solid var(--color-border); border-radius: 999px; font-size: 12px;">🌙 Late-night</span>
+          <span style="padding: 6px 14px; border: 1px solid var(--color-border); border-radius: 999px; font-size: 12px;">💳 Card only</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FIX #11: Plan Your Visit (was missing entirely)
+       ============================================ -->
+  <section class="section fade-in" id="visit" style="border-top: 1px solid var(--color-border);">
+    <div class="section-header">
+      <div class="section-eyebrow">Plan Your Visit</div>
+      <h2 class="section-title">Everything you need to know</h2>
+    </div>
+
+    <div class="lineup-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
+      <div class="artist-card" style="cursor: default;">
+        <div class="artist-info" style="padding: 24px;">
+          <div style="font-size: 28px; margin-bottom: 8px;">🗺️</div>
+          <div class="artist-name">Festival Map</div>
+          <div class="artist-time" style="margin-top: 8px;">Interactive map with stages, food zones, ATMs and exits.</div>
+        </div>
+      </div>
+      <div class="artist-card" style="cursor: default;">
+        <div class="artist-info" style="padding: 24px;">
+          <div style="font-size: 28px; margin-bottom: 8px;">🚇</div>
+          <div class="artist-name">Getting There</div>
+          <div class="artist-time" style="margin-top: 8px;">Metro, bus, taxi, parking — full transport info.</div>
+        </div>
+      </div>
+      <div class="artist-card" style="cursor: default;">
+        <div class="artist-info" style="padding: 24px;">
+          <div style="font-size: 28px; margin-bottom: 8px;">🏨</div>
+          <div class="artist-name">Hotels Nearby</div>
+          <div class="artist-time" style="margin-top: 8px;">Partner rates with Tbilisi hotels — book within the festival.</div>
+        </div>
+      </div>
+      <div class="artist-card" style="cursor: default;">
+        <div class="artist-info" style="padding: 24px;">
+          <div style="font-size: 28px; margin-bottom: 8px;">🎒</div>
+          <div class="artist-name">What to Bring</div>
+          <div class="artist-time" style="margin-top: 8px;">Allowed items, prohibited items, weather guide.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FIX #12: FAQ (was completely missing)
+       ============================================ -->
+  <section class="section fade-in" id="faq" style="border-top: 1px solid var(--color-border);">
+    <div class="section-header">
+      <div class="section-eyebrow">FAQ</div>
+      <h2 class="section-title">Frequently asked questions</h2>
+    </div>
+
+    <div class="faq">
+      <div class="faq-item" data-faq>
+        <button class="faq-question">
+          How do I get my ticket?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer">After payment you'll receive a PDF with QR code by email within 2 minutes. Save it or print it — at the entrance we scan the QR and exchange it for a wristband. If you don't receive it, use our self-service recovery page.</div>
+      </div>
+
+      <div class="faq-item" data-faq>
+        <button class="faq-question">
+          Can I buy more than one ticket?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer">Yes — up to 3 tickets per personal ID (ID number is verified at entrance). Each ticket needs a separate name and personal ID at checkout.</div>
+      </div>
+
+      <div class="faq-item" data-faq>
+        <button class="faq-question">
+          What's the refund policy?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer">Refunds are available up to 15 business days before the festival, at 50% of the paid amount. If the festival is cancelled by organizers, you get a full refund. If postponed, your ticket remains valid for the new date.</div>
+      </div>
+
+      <div class="faq-item" data-faq>
+        <button class="faq-question">
+          Is the festival outdoors? What about weather?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer">Yes, the festival takes place outdoors. It runs in all weather conditions. Weather is not grounds for refund — we'll publish a weather guide closer to the date.</div>
+      </div>
+
+      <div class="faq-item" data-faq>
+        <button class="faq-question">
+          What can I bring? What's prohibited?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer">Prohibited: sharp objects, drugs, pyrotechnics, glass bottles, drones. Allowed: phone, small backpack, ID, payment card. The festival is cashless — bring your card.</div>
+      </div>
+
+      <div class="faq-item" data-faq>
+        <button class="faq-question">
+          I lost my ticket / QR doesn't scan — what now?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer">Use our Ticket Recovery page to resend your QR by email. At the entrance, if the QR is damaged, our staff can verify you manually with your ID and personal number.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FIX #13: Newsletter (was missing)
+       ============================================ -->
+  <section class="section fade-in">
+    <div class="newsletter">
+      <div class="newsletter-title">Get lineup updates</div>
+      <p class="newsletter-desc">Be the first to hear when new artists are announced, ticket waves open, and exclusive Joker member drops.</p>
+      <form class="newsletter-form" data-newsletter>
+        <input type="email" placeholder="your@email.com" required />
+        <button type="submit" class="btn-primary" style="padding: 14px 28px;">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FIX #14: Footer (was missing entirely)
+       ============================================ -->
+  <footer class="footer" id="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Tbilisi <span>Style 21</span></h3>
+          <p>Georgia's largest electronic music festival. Where Georgian culture meets the global sound of today.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" aria-label="TikTok">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+            </a>
+            <a href="#" aria-label="YouTube">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Festival</h4>
+          <ul>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#about">Mission</a></li>
+            <li><a href="#stages">Stages</a></li>
+            <li><a href="#lineup">Lineup</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Tickets</h4>
+          <ul>
+            <li><a href="#tickets">All Tickets</a></li>
+            <li><a href="#tickets">Joker</a></li>
+            <li><a href="#">Group Sales</a></li>
+            <li><a href="#">Refund Policy</a></li>
+            <li><a href="#">Ticket Recovery</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Info</h4>
+          <ul>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#visit">Map</a></li>
+            <li><a href="#">Rules & Terms</a></li>
+            <li><a href="mailto:Tbilisistyle21@gmail.com">Contact</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">© 2027 Tbilisi Style 21. All rights reserved.</div>
+        <div class="footer-payments">
+          <span style="font-size: 11px; color: var(--color-text-dim); letter-spacing: 0.1em;">SECURE PAYMENT:</span>
+          <img src="../public/paymentLogo/Visa_Brandmark_White_RGB_2021.png" alt="Visa" />
+          <img src="../public/paymentLogo/ms_hrz_opt_rev_75_3x.png" alt="Mastercard" />
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       FIX #15: Sticky Buy Bar on mobile
+       ============================================ -->
+  <div class="sticky-buy">
+    <div class="sticky-buy-info">
+      From <strong>80 ₾</strong>
+      <span style="color: var(--color-text-dim);">Early Bird ends June 30</span>
+    </div>
+    <a href="#tickets" class="btn-primary">Buy Now</a>
+  </div>
+
+  <!-- ============================================
+       FIX #16: BUY MODAL — Order Summary, Terms, validation hints, loading
+       (was: generic modal, no summary, no T&C, silent latin filter)
+       ============================================ -->
+  <div class="modal-backdrop" data-modal>
+    <div class="modal">
+      <div class="modal-header">
+        <button class="modal-close" data-modal-close aria-label="Close">✕</button>
+        <div class="modal-eyebrow">Checkout</div>
+        <div class="modal-title" data-ticket-name>Day Pass</div>
+      </div>
+
+      <div class="modal-body">
+        <!-- Order Summary (FIX: transparency before payment) -->
+        <div class="order-summary">
+          <div class="order-summary-row">
+            <span>Ticket</span>
+            <span data-ticket-name>Day Pass</span>
+          </div>
+          <div class="order-summary-row">
+            <span>Date</span>
+            <span data-ticket-date>27 August 2027</span>
+          </div>
+          <div class="order-summary-row">
+            <span>Quantity</span>
+            <span>1</span>
+          </div>
+          <div class="order-summary-row">
+            <span>Price</span>
+            <span data-ticket-price>80 ₾</span>
+          </div>
+          <div class="order-summary-row total">
+            <span>Total</span>
+            <span data-ticket-total>80 ₾</span>
+          </div>
+        </div>
+
+        <form data-buy-form novalidate>
+          <!-- FIX: Latin-only with visible placeholder + hint -->
+          <div class="form-group">
+            <label class="form-label">Name <span class="required">*</span></label>
+            <input type="text" name="name" class="form-input" required
+                   placeholder="Giorgi"
+                   autocomplete="given-name" />
+            <div class="form-hint" data-default="Latin letters only — as written on your ID">
+              Latin letters only — as written on your ID
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Surname <span class="required">*</span></label>
+            <input type="text" name="surname" class="form-input" required
+                   placeholder="Beridze"
+                   autocomplete="family-name" />
+            <div class="form-hint" data-default="Latin letters only — as written on your ID">
+              Latin letters only — as written on your ID
+            </div>
+          </div>
+
+          <!-- FIX: Personal Number — numeric keyboard, 11-digit check, live counter -->
+          <div class="form-group">
+            <label class="form-label">Personal Number (ID) <span class="required">*</span></label>
+            <input type="text" name="personalNumber" class="form-input" required
+                   inputmode="numeric"
+                   pattern="[0-9]{11}"
+                   maxlength="11"
+                   placeholder="01001012345"
+                   autocomplete="off" />
+            <div class="form-hint" data-default="11 digits — Georgian ID number">
+              11 digits — Georgian ID number
+            </div>
+          </div>
+
+          <!-- FIX: Email — autocomplete + typo detection -->
+          <div class="form-group">
+            <label class="form-label">Email <span class="required">*</span></label>
+            <input type="email" name="email" class="form-input" required
+                   inputmode="email"
+                   placeholder="you@example.com"
+                   autocomplete="email" />
+            <div class="form-hint" data-default="Your ticket QR will be sent here">
+              Your ticket QR will be sent here
+            </div>
+          </div>
+
+          <!-- FIX: Terms & Conditions checkbox (was: missing — legal risk) -->
+          <label class="form-check">
+            <input type="checkbox" name="terms" required />
+            <span>I agree to the <a href="#">Rules & Terms</a> and confirm my email is correct</span>
+          </label>
+
+          <!-- FIX: Loading state with spinner + multi-stage feedback -->
+          <button type="submit" class="btn-submit" data-submit>
+            <span class="spinner" style="display: none;"></span>
+            <span data-submit-text>Pay 80 ₾ securely</span>
+          </button>
+
+          <!-- FIX: Trust note -->
+          <div class="modal-footer-note">
+            🔒 Secure 3DS payment by Quipu · No card data stored
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
